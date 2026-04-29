@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium backend engineering, API development, and scalable enterprise solutions for startups and enterprises.">
+    <meta name="keywords" content="Backend Development, API Development, System Integration, Cloud Architecture, Java, Spring Boot">
+    <meta name="author" content="IT Services Company">
+    <meta property="og:title" content="Premium Backend Engineering & Scalable Enterprise Solutions">
+    <meta property="og:description" content="We help startups and enterprises build reliable, high-performance systems.">
+    <meta property="og:type" content="website">
+
+    <title>Premium Backend Engineering & Enterprise Solutions | IT Services</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231e3a5f' width='100' height='100'/><text x='50' y='60' font-size='60' fill='white' text-anchor='middle' font-weight='bold'>IT</text></svg>">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a5f;
+            --primary-light: #2d5a8f;
+            --primary-dark: #0f1f36;
+            --accent: #00a8e8;
+            --accent-light: #4dd0e1;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8fafb;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --success: #10b981;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-light);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .cta-btn {
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 168, 232, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 168, 232, 0.1);
+            border-radius: 50%;
+            transform: translate(-50px, 100px);
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero-subheadline {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .section-title h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
+        #services {
+            background: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 32px rgba(30, 58, 95, 0.12);
+            border-color: var(--accent);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Industries Section */
+        #industries {
+            background: var(--white);
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .industry-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
+            background: var(--bg-light);
+            transition: all 0.3s ease;
+        }
+
+        .industry-card:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .industry-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .industry-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .industry-card:hover h3 {
+            color: var(--white);
+        }
+
+        /* Why Choose Us Section */
+        #why-us {
+            background: var(--bg-light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            padding: 2rem;
+            background: var(--white);
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+        }
+
+        .benefit-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* About Section */
+        #about {
+            background: var(--white);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Team Section */
+        #team {
+            background: var(--bg-light);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(30, 58, 95, 0.15);
+        }
+
+        .team-avatar {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--white);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .team-role {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(77, 208, 225, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-title h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .form-note {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--white);
+            color: var(--primary);
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-light);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mt-3 {
+            margin-top: 3rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subheadline {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .services-grid,
+            .industry-grid,
+            .benefits-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            nav, #contact, footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="container" style="max-width: 1200px; padding: 1rem 2rem;">
+            <div class="logo">
+                <div class="logo-icon">IT</div>
+                <span>TechForIT</span>
+            </div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="cta-btn">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Build Reliable Systems That Scale</h1>
+            <p class="hero-subheadline">
+                Enterprise-grade backend engineering and API solutions for startups and enterprises.
+                We deliver high-performance, scalable systems that power your growth.
+            </p>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    📋 Book Free Consultation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p class="section-subtitle">Comprehensive solutions for modern backend needs</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>API Development</h3>
+                <p>RESTful and GraphQL APIs built for performance and scale. Clean, well-documented, production-ready endpoints that integrate seamlessly with your frontend and third-party services.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔗</div>
+                <h3>System Integration</h3>
+                <p>Seamless integration of enterprise systems using industry-standard patterns. MuleSoft, Apache Kafka, message queues—we connect your tech stack efficiently and reliably.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Backend Development</h3>
+                <p>Robust backend services using Java, Spring Boot, Node.js, and Python. From microservices to monolithic architecture, we build systems designed for reliability and maintainability.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">☁️</div>
+                <h3>Cloud & Scalability</h3>
+                <p>Deploy, scale, and optimize on AWS, GCP, or Azure. Auto-scaling, containerization with Docker/Kubernetes, and infrastructure-as-code for bulletproof deployments.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Database Design</h3>
+                <p>Optimize your data layer with PostgreSQL, MySQL, MongoDB, or specialized databases. Schema design, indexing strategies, and performance tuning for millions of transactions.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Security & Compliance</h3>
+                <p>Secure APIs with OAuth, JWT, and encryption. GDPR, PCI-DSS, and SOC 2 compliance implementation. Security audits and vulnerability assessments included.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="container">
+        <div class="section-title">
+            <h2>Industries We Serve</h2>
+            <p class="section-subtitle">Proven expertise across diverse sectors</p>
+        </div>
+
+        <div class="industry-grid">
+            <div class="industry-card">
+                <div class="industry-icon">🏦</div>
+                <h3>Finance & FinTech</h3>
+                <p>Payment gateways, trading platforms, lending systems. Regulatory compliance, real-time processing, and enterprise-grade security.</p>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-icon">🚀</div>
+                <h3>Startups & Scale-ups</h3>
+                <p>Build fast, iterate faster. From MVP to unicorn, we scale with you. Cost-effective solutions that don't compromise on quality.</p>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-icon">🛒</div>
+                <h3>E-commerce & Retail</h3>
+                <p>High-traffic platforms, inventory management, order processing. We handle Black Friday. We handle peak loads.</p>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-icon">🏢</div>
+                <h3>Enterprise Systems</h3>
+                <p>Legacy modernization, ERP integration, custom enterprise solutions. We speak enterprise architecture and deliver at scale.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="container">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+            <p class="section-subtitle">Results-driven engineering backed by real-world experience</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h3>✓ Performance First</h3>
+                <p>We don't build software that's "good enough." Every system is optimized for speed, efficiency, and minimal latency. Your users notice the difference.</p>
+            </div>
+
+            <div class="benefit-item">
+                <h3>✓ Built for Scale</h3>
+                <p>Architected from day one to handle 10x, 100x growth. Horizontal scaling, load balancing, and distributed systems—we think in terms of millions of users.</p>
+            </div>
+
+            <div class="benefit-item">
+                <h3>✓ Reliability & Uptime</h3>
+                <p>99.9%+ uptime track record. Redundancy, failover mechanisms, and disaster recovery built into every solution. Your business never stops.</p>
+            </div>
+
+            <div class="benefit-item">
+                <h3>✓ Long-term Partnership</h3>
+                <p>We're not a one-time vendor. Ongoing support, maintenance, optimization, and strategic guidance. We grow with your business.</p>
+            </div>
+
+            <div class="benefit-item">
+                <h3>✓ Transparent Communication</h3>
+                <p>No jargon, no surprises. Weekly updates, clear timelines, honest assessments. You always know what's happening.</p>
+            </div>
+
+            <div class="benefit-item">
+                <h3>✓ Cost Efficiency</h3>
+                <p>Smart engineering that reduces infrastructure costs without cutting corners. Better architecture = lower bills + better performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <div class="section-title">
+            <h2>About Our Team</h2>
+            <p class="section-subtitle">Experienced engineers solving real problems</p>
+        </div>
+
+        <div class="about-content">
+            <p>
+                We are a team of experienced engineers specializing in backend architecture, distributed systems, and enterprise integration.
+                With over 50+ years of combined experience across Fortune 500 companies, startups, and scale-ups, we've built systems handling
+                billions of transactions and millions of concurrent users.
+            </p>
+            <p>
+                Our approach is simple: understand your business challenges, design efficient solutions, execute flawlessly, and deliver long-term support.
+                We don't believe in band-aids. Every system we build is robust, maintainable, and built to scale.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="container">
+        <div class="section-title">
+            <h2>Meet Our Team</h2>
+            <p class="section-subtitle">Experts driving your success</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">🧑‍💼</div>
+                <div class="team-info">
+                    <h3>Avinash Kini</h3>
+                    <div class="team-role">VP, Engineering</div>
+                    <p>20+ years in backend systems and cloud architecture. Led teams across fintech and enterprise sectors.</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👨‍💻</div>
+                <div class="team-info">
+                    <h3>Ravi Dhumal</h3>
+                    <div class="team-role">Associate, Backend</div>
+                    <p>Full-stack backend engineer. Expertise in Java, Spring Boot, and distributed systems design.</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👨‍🎓</div>
+                <div class="team-info">
+                    <h3>Intern Placeholder 1</h3>
+                    <div class="team-role">Junior Developer</div>
+                    <p><!-- Edit intern name and role here --></p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👨‍🎓</div>
+                <div class="team-info">
+                    <h3>Intern Placeholder 2</h3>
+                    <div class="team-role">Junior Developer</div>
+                    <p><!-- Edit intern name and role here --></p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👨‍🎓</div>
+                <div class="team-info">
+                    <h3>Intern Placeholder 3</h3>
+                    <div class="team-role">Junior Developer</div>
+                    <p><!-- Edit intern name and role here --></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-title">
+                <h2>Start Your Project Today</h2>
+                <p class="form-note">Get expert guidance. Free, no-obligation consultation.</p>
+            </div>
+
+            <form class="contact-container" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Your company name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="requirement">What's Your Challenge?</label>
+                    <textarea id="requirement" name="requirement" placeholder="Tell us about your backend challenges, scale requirements, timeline, etc." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">📧 Send My Details</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechForIT</h3>
+                <p>Premium backend engineering and scalable enterprise solutions.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#industries">Industries</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+                <a href="mailto:contact@techventure.com">Email Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 TechForIT. All rights reserved. | Crafted for teams building the future.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const requirement = document.getElementById('requirement').value;
+
+            // Replace with your email service endpoint or email provider
+            // For now, we'll show a success message and could integrate with EmailJS or similar
+            console.log('Form Submitted:', { name, email, company, requirement });
+
+            // Example: Send to email service
+            // fetch('/api/send-lead', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ name, email, company, requirement })
+            // }).then(res => alert('Thanks! We\'ll be in touch shortly.'));
+
+            alert('Thank you! We\'ll review your details and reach out within 24 hours.');
+            event.target.reset();
+        }
+
+        // Smooth scroll on anchor clicks
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add fade-in animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .industry-card, .benefit-item, .team-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
